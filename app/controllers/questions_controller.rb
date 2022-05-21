@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    @question = params[:question] # this will store the user input from the form in the variable @question; params collects the data from the request:
+    @question = params[:question]
     if @question.blank?
       @answer = "I can't hear you!"
     elsif @question =~ /i am going to work/i
@@ -15,3 +15,5 @@ class QuestionsController < ApplicationController
     end
   end
 end
+
+# @question = this will store the user input from the form in the variable @question; params collects the data from the request:
